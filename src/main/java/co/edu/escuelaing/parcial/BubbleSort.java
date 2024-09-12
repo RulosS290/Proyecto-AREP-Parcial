@@ -2,13 +2,13 @@ package co.edu.escuelaing.parcial;
 
 
 public class BubbleSort {
-    int[] bubble = {};
-    public BubbleSort(int[] bubble){
+    double[] bubble = {};
+    public BubbleSort(double[] bubble){
         this.bubble = bubble;
         sort();
     }
-    public int[] sort(){
-        int[] newBubble = {};
+    public double[] sort(){
+        double[] newBubble = {};
         boolean band = false;
         while(!band){
             int cont = 0;
@@ -17,7 +17,7 @@ public class BubbleSort {
                     newBubble[x] = bubble[x];
                     cont += 1;
                 }else{
-                    int varTemp = bubble[x];
+                    double varTemp = bubble[x];
                     newBubble[x]= bubble[x+1];
                     bubble[x+1] = varTemp; 
                     cont += 1;
