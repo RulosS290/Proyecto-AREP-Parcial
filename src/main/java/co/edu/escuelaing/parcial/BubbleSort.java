@@ -8,10 +8,10 @@ public class BubbleSort {
         sort();
     }
     public double[] sort(){
-        double[] newBubble = {};
         boolean band = false;
         while(!band){
             int cont = 0;
+            double[] newBubble = {};
             for(int x = 0; x <= bubble.length -2; x++){
                 if(bubble[x] < bubble[x+1]){
                     newBubble[x] = bubble[x];
@@ -19,15 +19,16 @@ public class BubbleSort {
                 }else{
                     double varTemp = bubble[x];
                     newBubble[x]= bubble[x+1];
-                    bubble[x+1] = varTemp; 
+                    newBubble[x+1] = varTemp; 
                     cont += 1;
                 }
             }
-            if(cont >= 0){
-                band =true;
+            if(cont == 0){
+                band = true;
             }
+            bubble = newBubble;
         }
-        return newBubble;
+        return bubble;
         
     }
 }
